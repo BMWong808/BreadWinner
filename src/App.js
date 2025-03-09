@@ -129,7 +129,7 @@ function App() {
 
             </div>
             <div className="map-container-right">
-                <APIProvider apiKey={'AIzaSyA4CJoS0fA9UFoeaeG_XfXJ_NGAkq8SfkA'} onLoad={() => console.log('API loaded')}>
+                <APIProvider apiKey={'Your API KEY'} onLoad={() => console.log('API loaded')}>
                     <Map
                         defaultZoom={13}
                         center={{ lat: 51.377594, lng: -2.373032 }}
