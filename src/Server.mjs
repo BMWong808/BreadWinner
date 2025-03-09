@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 
 const app = express();
 const PORT = 5000;
-const API_KEY = "AIzaSyDuZv-GlHTcihgjVojTXI3v170aAK6Z3mc"; // Replace with your actual key
+const API_KEY = "YOUR API KEY";
 
 const types = ['museum', 'park', 'hiking_area', 'cafe', 'movie_theater']
 
