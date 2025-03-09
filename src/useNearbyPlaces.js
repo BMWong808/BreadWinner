@@ -1,7 +1,5 @@
 import {useState, useEffect} from 'react';
 
-const API_KEY = 'AIzaSyA4CJoS0fA9UFoeaeG_XfXJ_NGAkq8SfkA';
-
 const useNearbyPlaces = (lat, lon) => {
     const [places, setPlaces] = useState([])
     const [loading, setLoading] = useState(true)
@@ -9,12 +7,11 @@ const useNearbyPlaces = (lat, lon) => {
     useEffect(() => {
         const  fetchPlaces = async () => {
             setLoading(true);
-            const url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lon}&radius=5000&type=restaurant&opennow=true&key=${API_KEY}";
 
             try{
-                const response = await fetch(url);
+                const response = await fetch(`http://localhost:5000/api/nearby-places?lat=${lat}&lon=${lon}`);
                 const data = await response.json();
-                setPlaces(data.results || []);
+                setPlaces(data || []);
             } catch (error) {
                 console.log(error);
             }

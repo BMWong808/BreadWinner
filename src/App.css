@@ -1,3 +1,10 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #bc9f54;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +42,92 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.split-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.prefernces-container-left, .main-container-right {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.prefernces-container-left{
+  background-color: #e3d3a3;
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-container-right {
+  background-color: #bc9f54;
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  pointer-events: all;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px;
+}
+
+label{
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+select, input{
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+button{
+  background-color: #bc9f54;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover{
+  background: #9b803b;
+}
+
+/* Suggested Activities */
+.suggested-activities {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.suggested-activities h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.suggested-activities p {
+  font-size: 1rem;
+  color: #555;
 }
